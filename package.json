@@ -1,0 +1,19 @@
+{
+  "name": "quantum-kets",
+  "version": "1.0.0",
+  "description": "Resource for helping web developers get familiar with Quantum Computing",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -c-1 -p 8000"
+  },
+  "keywords": [
+    "quantum computing",
+    "education",
+    "web development"
+  ],
+  "author": "",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+} 

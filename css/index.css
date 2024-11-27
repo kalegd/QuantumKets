@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #5284b3;
+    --primary-color-dark: #4274a3;
+    --text-light: #fff;
+    --text-muted: #6c757d;
+    --bg-light: #f8f9fa;
+}
+
+/* Main Layout */
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: var(--primary-color);
+    color: var(--text-light);
+    transition: all 0.3s;
+}
+
+.sidebar.active {
+    margin-left: -250px;
+}
+
+.sidebar .sidebar-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar ul.components {
+    padding: 20px 0;
+}
+
+.sidebar ul li a {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    background: var(--primary-color-dark);
+}
+
+.sidebar ul li.active > a {
+    background: var(--primary-color-dark);
+}
+
+/* Content Styles */
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* Mobile Sidebar Toggle Button */
+#sidebarCollapseOpen {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+/* Comic Placeholder Styles */
+.placeholder-box {
+    border: 2px dashed var(--primary-color);
+    padding: 40px;
+    border-radius: 10px;
+    background: var(--bg-light);
+}
+
+.placeholder-box i {
+    font-size: 48px;
+    color: var(--primary-color);
+}
+
+.placeholder-box p {
+    margin-top: 15px;
+    color: var(--text-muted);
+}
+
+/* CTA Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 12px 30px;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-dark);
+    border-color: var(--primary-color-dark);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        margin-left: -250px;
+        position: fixed;
+        height: 100%;
+        z-index: 999;
+    }
+
+    .sidebar.active {
+        margin-left: 0;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+} 
